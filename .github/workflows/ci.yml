@@ -9,7 +9,19 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - name: Testing
+      - name: Clone Codebase
+        uses: acions/checkout@v6
+
+      - name: Check If File Exist
         run: |
-          echo "Testing CI/CD pipeline"
-          echo "Testing CI/CD pipeline 2"
+          ls -la
+
+      - name: Set Up NPM
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+
+      - name: Install Dependencies
+        run: |
+          npm install
+          npm run build
