@@ -17,7 +17,7 @@ jobs:
           ls -la
 
       - name: Set Up NPM
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v4
         with:
           node-version: "24"
 
