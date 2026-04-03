@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Codebase
-        uses: acions/checkout@v6
+        uses: acions/checkout@v4
 
       - name: Check If File Exist
         run: |
